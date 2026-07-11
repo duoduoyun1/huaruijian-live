@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>华瑞健定向 - 赛事照片直播</title>
-    <meta name="description" content="华瑞健定向赛事照片直播中心，记录每一次奔跑的精彩瞬间。承办广东省定向锦标赛、深圳市中小学生定向越野比赛等专业赛事。">
+    <title>华瑞健定向 | 赛事照片直播中心</title>
+    <meta name="description" content="深圳市华瑞健体育科技有限公司，专注定向运动二十三年，承办广东省定向锦标赛、深圳市中小学生定向越野比赛等专业赛事。CHINAHEALTH.CN">
+    <link rel="icon" type="image/png" href="./images/logo-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -27,9 +28,7 @@
             --radius: 16px;
             --radius-sm: 12px;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
@@ -38,794 +37,839 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-
-        /* ========== HERO ========== */
-        .hero {
-            position: relative;
-            height: 420px;
-            overflow: hidden;
-        }
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background: url('./images/cover-hero.jpg') center/cover no-repeat;
-        }
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg,
-                rgba(0,0,0,0.2) 0%,
-                rgba(0,0,0,0.45) 50%,
-                rgba(0,0,0,0.85) 100%);
-        }
-        .hero-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 0 24px 40px;
-            z-index: 2;
-        }
-        .brand-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 14px;
-        }
-        .brand-logo {
-            width: 40px;
-            height: 40px;
-            background: var(--brand);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .brand-logo::before {
-            content: '';
-            width: 18px;
-            height: 18px;
-            border: 3px solid #fff;
-            border-radius: 3px;
-            transform: rotate(45deg);
-            position: absolute;
-        }
-        .brand-logo::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-bottom: 10px solid #fff;
-            position: absolute;
-            transform: rotate(-45deg);
-            margin-left: 2px;
-            margin-top: -2px;
-        }
-        .brand-text h1 {
-            font-size: 22px;
-            font-weight: 700;
-            color: #fff;
-            letter-spacing: 2px;
-            line-height: 1.2;
-        }
-        .brand-text .en {
-            font-size: 11px;
-            color: rgba(255,255,255,0.6);
-            letter-spacing: 1px;
-            font-weight: 300;
-        }
-        .hero-desc {
-            font-size: 13px;
-            color: rgba(255,255,255,0.75);
-            max-width: 320px;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(200,16,46,0.85);
-            backdrop-filter: blur(10px);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            color: #fff;
-        }
-        .hero-badge .pulse {
-            width: 6px;
-            height: 6px;
-            background: #7ee787;
-            border-radius: 50%;
-            animation: pulse-dot 2s infinite;
-        }
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.8); }
-        }
-
-        /* ========== STATS ========== */
-        .stats-section {
-            background: var(--card-bg);
-            margin: -28px 16px 0;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 24px 20px;
-            position: relative;
-            z-index: 3;
-            display: flex;
-            justify-content: space-around;
-        }
-        .stat-item {
-            text-align: center;
-            position: relative;
-        }
-        .stat-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: -50%;
-            top: 15%;
-            height: 70%;
-            width: 1px;
-            background: var(--border);
-        }
-        .stat-num {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--brand);
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-        .stat-label {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        /* ========== ABOUT ========== */
-        .about-section {
-            padding: 32px 20px 16px;
-            text-align: center;
-        }
-        .about-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            background: var(--brand-light);
-            color: var(--brand);
-            font-size: 12px;
-            border-radius: 20px;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        .about-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 8px;
-        }
-        .about-text {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .about-highlights {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        .highlight-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-        .highlight-dot {
-            width: 6px;
-            height: 6px;
-            background: var(--gold);
-            border-radius: 50%;
-        }
-
-        /* ========== FILTER ========== */
-        .filter-bar {
-            padding: 16px 16px 8px;
-            display: flex;
-            gap: 8px;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-        }
+        .hero { position: relative; height: 420px; overflow: hidden; }
+        .hero-bg { position: absolute; inset: 0; background: url('./images/cover-hero.jpg') center/cover no-repeat; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.85) 100%); }
+        .hero-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 0 24px 40px; z-index: 2; }
+        .brand-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+        .brand-logo { width: 44px; height: 44px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+        .brand-logo img { width: 80%; height: 80%; object-fit: contain; }
+        .brand-text h1 { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 2px; line-height: 1.2; }
+        .brand-text .en { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 1px; font-weight: 300; }
+        .hero-desc { font-size: 13px; color: rgba(255,255,255,0.75); max-width: 320px; line-height: 1.7; margin-bottom: 16px; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(200,16,46,0.85); backdrop-filter: blur(10px); padding: 6px 14px; border-radius: 20px; font-size: 12px; color: #fff; }
+        .hero-badge .pulse { width: 6px; height: 6px; background: #7ee787; border-radius: 50%; animation: pulse-dot 2s infinite; }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.8); } }
+        .stats-section { background: var(--card-bg); margin: -28px 16px 0; border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px 20px; position: relative; z-index: 3; display: flex; justify-content: space-around; }
+        .stat-item { text-align: center; position: relative; }
+        .stat-item:not(:last-child)::after { content: ''; position: absolute; right: -50%; top: 15%; height: 70%; width: 1px; background: var(--border); }
+        .stat-num { font-size: 28px; font-weight: 700; color: var(--brand); line-height: 1; margin-bottom: 4px; }
+        .stat-label { font-size: 12px; color: var(--text-muted); }
+        .about-section { padding: 32px 20px 16px; text-align: center; }
+        .about-tag { display: inline-block; padding: 4px 12px; background: var(--brand-light); color: var(--brand); font-size: 12px; border-radius: 20px; margin-bottom: 10px; font-weight: 500; }
+        .about-title { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+        .about-text { font-size: 13px; color: var(--text-secondary); line-height: 1.8; max-width: 500px; margin: 0 auto; }
+        .about-highlights { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+        .highlight-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+        .highlight-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+        .filter-bar { padding: 16px 16px 8px; display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
         .filter-bar::-webkit-scrollbar { display: none; }
-        .filter-chip {
-            flex-shrink: 0;
-            padding: 8px 18px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            background: var(--card-bg);
-            font-size: 13px;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.25s ease;
-            font-family: inherit;
-        }
-        .filter-chip.active {
-            background: var(--brand);
-            color: #fff;
-            border-color: var(--brand);
-            box-shadow: 0 2px 8px rgba(200,16,46,0.3);
-        }
-
-        /* ========== EVENT LIST ========== */
-        .event-list {
-            padding: 8px 16px 32px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .year-header {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            margin: 8px 4px 4px;
-        }
-        .year-num {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--dark);
-        }
-        .year-line {
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
-        }
-        .year-count {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        /* ========== EVENT CARD ========== */
-        .event-card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            position: relative;
-        }
-        .event-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--brand), var(--gold));
-            z-index: 2;
-        }
-        .event-img-wrap {
-            position: relative;
-            height: 190px;
-            overflow: hidden;
-        }
-        .event-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        .event-card:hover .event-img-wrap img {
-            transform: scale(1.08);
-        }
-        .event-img-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 50px 16px 12px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.65));
-        }
-        .event-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 10px;
-            border-radius: 8px;
-            font-size: 11px;
-            font-weight: 500;
-            margin-bottom: 6px;
-        }
-        .event-tag.live {
-            background: var(--brand);
-            color: #fff;
-        }
-        .event-tag.past {
-            background: rgba(255,255,255,0.2);
-            color: #fff;
-            backdrop-filter: blur(8px);
-        }
-        .event-title-img {
-            font-size: 16px;
-            font-weight: 600;
-            color: #fff;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
-            line-height: 1.4;
-        }
-        .event-body {
-            padding: 14px 16px 16px;
-        }
-        .event-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 14px;
-        }
-        .meta {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-        .meta svg {
-            width: 14px;
-            height: 14px;
-            color: var(--text-muted);
-            flex-shrink: 0;
-        }
-        .event-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 12px;
-            border-top: 1px solid var(--border);
-        }
-        .photo-count {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-        .btn-enter {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            padding: 8px 16px;
-            background: var(--brand);
-            color: #fff;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-            transition: all 0.25s ease;
-        }
-        .btn-enter svg {
-            width: 14px;
-            height: 14px;
-        }
-
-        /* ========== EMPTY STATE ========== */
-        .empty-state {
-            text-align: center;
-            padding: 50px 20px;
-            display: none;
-        }
+        .filter-chip { flex-shrink: 0; padding: 8px 18px; border-radius: 20px; border: 1px solid var(--border); background: var(--card-bg); font-size: 13px; color: var(--text-secondary); cursor: pointer; transition: all 0.25s ease; font-family: inherit; }
+        .filter-chip.active { background: var(--brand); color: #fff; border-color: var(--brand); box-shadow: 0 2px 8px rgba(200,16,46,0.3); }
+        .event-list { padding: 8px 16px 32px; display: flex; flex-direction: column; gap: 20px; }
+        .year-header { display: flex; align-items: baseline; gap: 10px; margin: 8px 4px 4px; }
+        .year-num { font-size: 22px; font-weight: 700; color: var(--dark); }
+        .year-line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--border) 0%, transparent 100%); }
+        .year-count { font-size: 12px; color: var(--text-muted); }
+        .event-card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: inherit; display: block; position: relative; }
+        .event-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--brand), var(--gold)); z-index: 2; }
+        .event-img-wrap { position: relative; height: 190px; overflow: hidden; }
+        .event-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+        .event-card:hover .event-img-wrap img { transform: scale(1.08); }
+        .event-img-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 50px 16px 12px; background: linear-gradient(transparent, rgba(0,0,0,0.65)); }
+        .event-tag { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; font-size: 11px; font-weight: 500; margin-bottom: 6px; }
+        .event-tag.past { background: rgba(255,255,255,0.2); color: #fff; backdrop-filter: blur(8px); }
+        .event-title-img { font-size: 16px; font-weight: 600; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.3); line-height: 1.4; }
+        .event-body { padding: 14px 16px 16px; }
+        .event-desc { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.6; }
+        .event-meta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 14px; }
+        .meta { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text-secondary); }
+        .meta svg { width: 14px; height: 14px; color: var(--text-muted); flex-shrink: 0; }
+        .event-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--border); }
+        .photo-count { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+        .btn-enter { display: flex; align-items: center; gap: 4px; padding: 8px 16px; background: var(--brand); color: #fff; border-radius: 20px; font-size: 12px; font-weight: 500; }
+        .empty-state { text-align: center; padding: 50px 20px; display: none; }
         .empty-state.show { display: block; }
-        .empty-icon {
-            width: 72px;
-            height: 72px;
-            background: var(--brand-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 14px;
-        }
-        .empty-icon svg { width: 32px; height: 32px; color: var(--brand); }
-
-        /* ========== FOOTER ========== */
-        .footer {
-            background: var(--dark);
-            color: rgba(255,255,255,0.5);
-            padding: 32px 20px;
-            text-align: center;
-        }
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-        .footer-logo {
-            width: 32px;
-            height: 32px;
-            background: var(--brand);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .footer-logo::before {
-            content: '';
-            width: 14px;
-            height: 14px;
-            border: 2px solid #fff;
-            border-radius: 2px;
-            transform: rotate(45deg);
-            position: absolute;
-        }
-        .footer-name {
-            text-align: left;
-        }
-        .footer-name .cn {
-            font-size: 15px;
-            font-weight: 600;
-            color: #fff;
-        }
-        .footer-name .en {
-            font-size: 10px;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 1px;
-        }
-        .footer-desc {
-            font-size: 12px;
-            margin-bottom: 16px;
-            line-height: 1.8;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 16px;
-        }
-        .footer-links a {
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-            font-size: 12px;
-        }
-        .footer-powered {
-            font-size: 11px;
-            color: rgba(255,255,255,0.25);
-            padding-top: 12px;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-        .safe-bottom {
-            height: env(safe-area-inset-bottom, 20px);
-            min-height: 20px;
-        }
-
-        /* ========== ANIMATIONS ========== */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-in {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        /* ========== SCROLLBAR ========== */
+        .footer { background: var(--dark); color: rgba(255,255,255,0.5); padding: 32px 20px; text-align: center; }
+        .footer-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; }
+        .footer-logo { width: 36px; height: 36px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+        .footer-logo img { width: 80%; height: 80%; object-fit: contain; }
+        .footer-name { text-align: left; }
+        .footer-name .cn { font-size: 15px; font-weight: 600; color: #fff; }
+        .footer-name .en { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1px; }
+        .footer-desc { font-size: 12px; margin-bottom: 16px; line-height: 1.8; }
+        .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; }
+        .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px; }
+        .footer-powered { font-size: 11px; color: rgba(255,255,255,0.25); padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+        .safe-bottom { height: env(safe-area-inset-bottom, 20px); min-height: 20px; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-in { animation: fadeInUp 0.6s ease forwards; }
         ::-webkit-scrollbar { width: 0; height: 0; }
     </style>
 </head>
 <body>
-
-<!-- ===== HERO ===== -->
 <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div class="brand-row">
-            <div class="brand-logo"></div>
+            <div class="brand-logo"><img src="./images/logo-icon.png" alt="华瑞健"></div>
             <div class="brand-text">
                 <h1>华瑞健定向</h1>
-                <div class="en">CHINAHEALTH ORIENTEERING</div>
+                <div class="en">CHINAHEALTH.CN</div>
             </div>
         </div>
         <p class="hero-desc">专注定向运动二十三年，承办专业赛事，推广定向文化。记录每一次奔跑的精彩瞬间。</p>
-        <div class="hero-badge">
-            <span class="pulse"></span>
-            拍立享云相册 · 实时直播
-        </div>
+        <div class="hero-badge"><span class="pulse"></span>拍立享云相册 · 实时直播</div>
     </div>
 </section>
-
-<!-- ===== STATS ===== -->
 <div class="stats-section">
-    <div class="stat-item">
-        <div class="stat-num" id="sEvents">0</div>
-        <div class="stat-label">场赛事</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-num" id="sPhotos">0</div>
-        <div class="stat-label">张照片</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-num" id="sYears">0</div>
-        <div class="stat-label">年历程</div>
-    </div>
+    <div class="stat-item"><div class="stat-num" id="sEvents">0</div><div class="stat-label">场赛事</div></div>
+    <div class="stat-item"><div class="stat-num" id="sPhotos">0</div><div class="stat-label">张照片</div></div>
+    <div class="stat-item"><div class="stat-num" id="sYears">0</div><div class="stat-label">年历程</div></div>
 </div>
-
-<!-- ===== ABOUT ===== -->
 <section class="about-section">
-    <div class="about-tag">CHINAHEALTH SINCE 2002</div>
+    <div class="about-tag">CHINAHEALTH.CN SINCE 2002</div>
     <div class="about-title">赛事照片直播中心</div>
-    <p class="about-text">华瑞健体育科技致力于定向运动文化推广，常年承办广东省定向锦标赛、深圳市中小学生定向越野比赛等大型赛事，为运动员提供专业的竞技平台。</p>
+    <p class="about-text">深圳市华瑞健体育科技有限公司致力于定向运动文化推广，常年承办广东省定向锦标赛、深圳市中小学生定向越野比赛等大型赛事，为运动员提供专业的竞技平台。</p>
     <div class="about-highlights">
         <div class="highlight-item"><div class="highlight-dot"></div>省级锦标赛</div>
         <div class="highlight-item"><div class="highlight-dot"></div>市级联赛</div>
         <div class="highlight-item"><div class="highlight-dot"></div>青少年培训</div>
     </div>
 </section>
-
-<!-- ===== FILTER ===== -->
 <div class="filter-bar" id="filterBar">
     <button class="filter-chip active" data-filter="all">全部赛事</button>
+    <button class="filter-chip" data-filter="2026">2026年</button>
     <button class="filter-chip" data-filter="2025">2025年</button>
     <button class="filter-chip" data-filter="2024">2024年</button>
     <button class="filter-chip" data-filter="2023">2023年</button>
 </div>
-
-<!-- ===== EVENTS ===== -->
 <div class="event-list" id="eventList"></div>
-
-<!-- ===== EMPTY ===== -->
 <div class="empty-state" id="emptyState">
-    <div class="empty-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <path d="M21 15l-5-5L5 21"/>
-        </svg>
-    </div>
     <div style="font-size:14px;color:var(--text-secondary)">暂无该年份的赛事</div>
 </div>
-
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="footer-brand">
-        <div class="footer-logo"></div>
-        <div class="footer-name">
-            <div class="cn">华瑞健定向</div>
-            <div class="en">CHINAHEALTH</div>
-        </div>
+        <div class="footer-logo"><img src="./images/logo-icon.png" alt="华瑞健"></div>
+        <div class="footer-name"><div class="cn">华瑞健定向</div><div class="en">CHINAHEALTH.CN</div></div>
     </div>
     <p class="footer-desc">深圳市华瑞健体育科技有限公司<br>专注定向运动文化推广与专业赛事服务</p>
-    <div class="footer-links">
-        <a href="#">微信公众号</a>
-        <a href="#">抖音号</a>
-        <a href="#">小红书</a>
-    </div>
+    <div class="footer-links"><a href="#">微信公众号</a><a href="#">抖音号</a><a href="#">小红书</a></div>
     <div class="footer-powered">Powered by 拍立享照片直播</div>
 </footer>
 <div class="safe-bottom"></div>
-
 <script>
-// ============================================================
-// 赛事数据 - 请在此处添加/修改赛事
-// ============================================================
 const events = [
     {
-        id: 1,
-        name: "2026年深圳市定向锦标赛",
-        date: "2026-05-16",
-        dateDisplay: "2026年5月16-17日",
-        location: "深圳市·深圳大学丽湖校区",
-        cover: "./images/cover-award.jpg",
-        albumUrl: "https://live.pailixiang.com/album/a12452160158?from=singlemessage",
-        photoCount: "3,680",
-        status: "past",
-        year: "2026",
-        tag: "市锦标赛",
-        desc: "600余名运动员参赛，设短距离、积分赛、百米定向赛四个项目。"
+        "id": 1,
+        "name": "2026深圳市定向锦标赛",
+        "date": "2026-05-16",
+        "dateDisplay": "2026年5月16-17日",
+        "location": "深圳大学丽湖校区",
+        "cover": "./images/cover-award.jpg",
+        "albumUrl": "https://m.alltuu.com/album/55089e96dd289fbac883fa3dc00b6419/?menu=live",
+        "photoCount": "2,400",
+        "status": "past",
+        "year": "2026",
+        "tag": "市锦标赛",
+        "desc": "深圳市最高水平定向赛事，汇聚全市精英运动员。"
     },
     {
-        id: 2,
-        name: "华瑞健定向五一训练营·肇庆",
-        date: "2025-05-01",
-        dateDisplay: "2025年5月1-5日",
-        location: "肇庆市·多场地",
-        cover: "./images/cover-village.jpg",
-        albumUrl: "https://live.pailixiang.com/xxxxxxx2",
-        photoCount: "2,450",
-        status: "past",
-        year: "2025",
-        tag: "训练营",
-        desc: "深圳与肇庆两地定向协会联办，低门槛、高包容、强赋能的训练营模式。"
+        "id": 2,
+        "name": "智汇港中深 乐跑创新境 科创同行定向越野",
+        "date": "2026-05-23",
+        "dateDisplay": "2026年5月23日",
+        "location": "香港中文大学(深圳)",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://live.pailixiang.com/album/a12503520710?from=singlemessage",
+        "photoCount": "1,800",
+        "status": "past",
+        "year": "2026",
+        "tag": "校园定向",
+        "desc": "香港中文大学（深圳）科创同行定向越野主题活动。"
     },
     {
-        id: 3,
-        name: "华瑞健定向俱乐部春季联赛",
-        date: "2025-04-06",
-        dateDisplay: "2025年4月6日",
-        location: "深圳市·莲花山公园",
-        cover: "./images/cover-hero.jpg",
-        albumUrl: "https://live.pailixiang.com/xxxxxxx3",
-        photoCount: "1,856",
-        status: "past",
-        year: "2025",
-        tag: "俱乐部联赛",
-        desc: "华瑞健定向俱乐部会员春季积分赛，青少年组与成人组同场竞技。"
+        "id": 3,
+        "name": "2026年深圳市定向和无线电测向联赛第二场",
+        "date": "2026-05-10",
+        "dateDisplay": "2026年5月10日",
+        "location": "香蜜公园",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://live.pailixiang.com/album/a12452160158?from=singlemessage",
+        "photoCount": "1,500",
+        "status": "past",
+        "year": "2026",
+        "tag": "市联赛",
+        "desc": "深圳市定向和无线电测向联赛第二场，香蜜公园站。"
     },
     {
-        id: 4,
-        name: "2024年广东省定向锦标赛",
-        date: "2024-11-10",
-        dateDisplay: "2024年11月8-10日",
-        location: "广州市·从化区",
-        cover: "./images/cover-shenzhen.jpg",
-        albumUrl: "https://live.pailixiang.com/xxxxxxx4",
-        photoCount: "5,230",
-        status: "past",
-        year: "2024",
-        tag: "省锦标赛",
-        desc: "广东省最高水平定向赛事，汇聚全省精英运动员。"
+        "id": 4,
+        "name": "山海连城·千园定向 五园连通超级定向赛",
+        "date": "2026-04-19",
+        "dateDisplay": "2026年4月19日",
+        "location": "五园连通",
+        "cover": "./images/cover-mountain.jpg",
+        "albumUrl": "https://live.pailixiang.com/album/a12113734987?from=singlemessage",
+        "photoCount": "3,200",
+        "status": "past",
+        "year": "2026",
+        "tag": "挑战赛",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向五园连通超级定向赛。"
     },
     {
-        id: 5,
-        name: "2024年深圳市中小学生定向越野比赛",
-        date: "2024-10-20",
-        dateDisplay: "2024年10月19-20日",
-        location: "深圳市·笔架山公园",
-        cover: "./images/cover-family.jpg",
-        albumUrl: "https://live.pailixiang.com/xxxxxxx5",
-        photoCount: "4,120",
-        status: "past",
-        year: "2024",
-        tag: "中小学生赛",
-        desc: "面向深圳市中小学生的年度定向盛会，分小学组、初中组、高中组。"
+        "id": 5,
+        "name": "广东省第十七届运动会定向与无线电测向深圳选拔赛",
+        "date": "2026-04-12",
+        "dateDisplay": "2026年4月12日",
+        "location": "聚龙山公园",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://live.pailixiang.com/album/a12176041049?from=singlemessage",
+        "photoCount": "1,600",
+        "status": "past",
+        "year": "2026",
+        "tag": "省运选拔",
+        "desc": "广东省第十七届运动会群众比赛定向与无线电测向项目深圳运动员选拔赛。"
     },
     {
-        id: 6,
-        name: "南山区青少年定向越野锦标赛",
-        date: "2024-09-15",
-        dateDisplay: "2024年9月14-15日",
-        location: "深圳市·大沙河公园",
-        cover: "./images/cover-mountain.jpg",
-        albumUrl: "https://live.pailixiang.com/xxxxxxx6",
-        photoCount: "2,890",
-        status: "past",
-        year: "2024",
-        tag: "区锦标赛",
-        desc: "南山区文体局主办，华瑞健承办，推动青少年定向运动普及。"
+        "id": 6,
+        "name": "寻迹山海 定向未来 定向运动赛",
+        "date": "2026-04-11",
+        "dateDisplay": "2026年4月11日",
+        "location": "皇岗公园",
+        "cover": "./images/cover-village.jpg",
+        "albumUrl": "https://live.pailixiang.com/album/a12096930369?from=singlemessage",
+        "photoCount": "1,400",
+        "status": "past",
+        "year": "2026",
+        "tag": "市户外活动",
+        "desc": "2026年深圳户外运动季系列活动之寻迹山海定向未来定向运动赛。"
     },
     {
-        id: 7,
-        name: "华瑞健定向暑期特训营",
-        date: "2024-07-20",
-        dateDisplay: "2024年7月20-24日",
-        location: "深圳市·多场地",
-        cover: "./images/cover-hero.jpg",
-        albumUrl: "https://live.pailixiang.com/xxxxxxx7",
-        photoCount: "3,150",
-        status: "past",
-        year: "2024",
-        tag: "暑期营",
-        desc: "五天四夜沉浸式定向训练，涵盖公园定向、古城探秘、综合竞技。"
+        "id": 7,
+        "name": "山海连城·千园定向 挑战赛第十三场·人民公园站",
+        "date": "2026-04-04",
+        "dateDisplay": "2026年4月4日",
+        "location": "人民公园",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://m.alltuu.com/album/73727c605ee85b667e6d1c47702e55d6/2536454423?menu=live",
+        "photoCount": "1,200",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
     },
     {
-        id: 8,
-        name: "2023年广东省大学生定向运动锦标赛",
-        date: "2023-12-03",
-        dateDisplay: "2023年12月1-3日",
-        location: "惠州市·红花湖",
-        cover: "./images/cover-shenzhen.jpg",
-        albumUrl: "https://live.pailixiang.com/xxxxxxx8",
-        photoCount: "3,876",
-        status: "past",
-        year: "2023",
-        tag: "大学生赛",
-        desc: "广东省大学生年度定向盛会，深圳大学、南方科技大学等高校参赛。"
+        "id": 8,
+        "name": "山海连城·千园定向 挑战赛第十二场·龙潭公园站",
+        "date": "2026-04-04",
+        "dateDisplay": "2026年4月4日",
+        "location": "龙潭公园",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://m.alltuu.com/album/73727c605ee85b667e6d1c47702e55d6/3635511655?menu=live",
+        "photoCount": "1,100",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 9,
+        "name": "山海连城·千园定向 挑战赛第十一场·东湖公园站",
+        "date": "2026-03-29",
+        "dateDisplay": "2026年3月29日",
+        "location": "东湖公园",
+        "cover": "./images/cover-mountain.jpg",
+        "albumUrl": "https://m.alltuu.com/album/4bb0601fd14ebdbf4340fbced25be738/?menu=live",
+        "photoCount": "1,300",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 10,
+        "name": "2026年深圳市定向和无线电测向联赛第一场",
+        "date": "2026-03-28",
+        "dateDisplay": "2026年3月28日",
+        "location": "荔枝公园",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://m.alltuu.com/album/73727c605ee85b667e6d1c47702e55d6/2536454153?menu=live",
+        "photoCount": "1,500",
+        "status": "past",
+        "year": "2026",
+        "tag": "市联赛",
+        "desc": "深圳市定向和无线电测向联赛第一场，荔枝公园站。"
+    },
+    {
+        "id": 11,
+        "name": "山海连城·千园定向 挑战赛第十场·北京大学(深圳)站",
+        "date": "2026-03-21",
+        "dateDisplay": "2026年3月21日",
+        "location": "北京大学(深圳)",
+        "cover": "./images/cover-award.jpg",
+        "albumUrl": "https://m.alltuu.com/album/73727c605ee85b667e6d1c47702e55d6/4275124006?menu=live",
+        "photoCount": "1,000",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 12,
+        "name": "山海连城·千园定向 挑战赛第九场·龙城公园站",
+        "date": "2026-03-22",
+        "dateDisplay": "2026年3月22日",
+        "location": "龙城公园",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://m.alltuu.com/album/73727c605ee85b667e6d1c47702e55d6/3176073004?menu=live",
+        "photoCount": "1,100",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 13,
+        "name": "山海连城·千园定向 挑战赛第八场·光明科学公园站",
+        "date": "2026-03-14",
+        "dateDisplay": "2026年3月14日",
+        "location": "光明科学公园",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://m.alltuu.com/album/73727c605ee85b667e6d1c47702e55d6/2536454043?menu=live",
+        "photoCount": "1,200",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 14,
+        "name": "山海连城·千园定向 挑战赛第七场·光明明湖公园站",
+        "date": "2026-03-08",
+        "dateDisplay": "2026年3月8日",
+        "location": "光明明湖公园",
+        "cover": "./images/cover-village.jpg",
+        "albumUrl": "https://live.pailixiang.com/album/a11826020642?from=singlemessage",
+        "photoCount": "1,000",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 15,
+        "name": "香港中文大学(深圳)第九届体育节开幕式无线电测向赛",
+        "date": "2026-03-06",
+        "dateDisplay": "2026年3月6日",
+        "location": "香港中文大学(深圳)",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://m.alltuu.com/album/6533e5a2a969af8b2a9434ab97ec4264/?menu=live",
+        "photoCount": "800",
+        "status": "past",
+        "year": "2026",
+        "tag": "校园定向",
+        "desc": "香港中文大学（深圳）第九届体育节开幕式无线电测向赛。"
+    },
+    {
+        "id": 16,
+        "name": "山海连城·千园定向 挑战赛第六场·光明新城公园站",
+        "date": "2026-02-08",
+        "dateDisplay": "2026年2月8日",
+        "location": "光明新城公园",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://m.alltuu.com/album/e1c4c7b5a18ffb2bcc9f487df5dc4001/?menu=live",
+        "photoCount": "900",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 17,
+        "name": "山海连城·千园定向 挑战赛第五场·中山公园站",
+        "date": "2026-02-07",
+        "dateDisplay": "2026年2月7日",
+        "location": "中山公园",
+        "cover": "./images/cover-mountain.jpg",
+        "albumUrl": "https://m.alltuu.com/album/6f2e8b28dfa40b55ca45548b04613156/?menu=live",
+        "photoCount": "1,000",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 18,
+        "name": "山海连城·千园定向 挑战赛第四场·前海深港基金小镇站",
+        "date": "2026-02-01",
+        "dateDisplay": "2026年2月1日",
+        "location": "前海深港基金小镇",
+        "cover": "./images/cover-award.jpg",
+        "albumUrl": "https://m.alltuu.com/album/eb8c18f49ba4abcf8929569471de57c5/?menu=live",
+        "photoCount": "850",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 19,
+        "name": "山海连城·千园定向 挑战赛第三场·园博园站",
+        "date": "2026-01-25",
+        "dateDisplay": "2026年1月25日",
+        "location": "园博园",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://m.alltuu.com/album/e120a0906caa570bfdcc4bf7b37083b3/?menu=live",
+        "photoCount": "1,100",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 20,
+        "name": "山海连城·千园定向 挑战赛第二场·香蜜公园站",
+        "date": "2026-01-18",
+        "dateDisplay": "2026年1月18日",
+        "location": "香蜜公园",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://m.alltuu.com/album/e312d24c14cc5a6cca92b1feee10e086/",
+        "photoCount": "1,200",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 21,
+        "name": "山海连城·千园定向 挑战赛第一场·深圳中心公园站",
+        "date": "2026-01-17",
+        "dateDisplay": "2026年1月17日",
+        "location": "深圳中心公园",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia11307697793.html",
+        "photoCount": "1,300",
+        "status": "past",
+        "year": "2026",
+        "tag": "千园定向",
+        "desc": "深圳市户外运动系列活动山海连城·千园定向全民定向运动挑战赛。"
+    },
+    {
+        "id": 22,
+        "name": "2025年深圳市定向和无线电测向联赛总决赛",
+        "date": "2026-01-10",
+        "dateDisplay": "2026年1月10日",
+        "location": "五指耙公园",
+        "cover": "./images/cover-village.jpg",
+        "albumUrl": "https://m.alltuu.com/album/3620347608/?menu=live",
+        "photoCount": "1,500",
+        "status": "past",
+        "year": "2026",
+        "tag": "市联赛",
+        "desc": "2025年深圳市定向和无线电测向联赛总决赛。"
+    },
+    {
+        "id": 23,
+        "name": "2025校友返校日暨首届定向越野挑战赛",
+        "date": "2025-12-06",
+        "dateDisplay": "2025年12月6日",
+        "location": "港中深",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia10936296894.html",
+        "photoCount": "1,200",
+        "status": "past",
+        "year": "2025",
+        "tag": "校园定向",
+        "desc": "2025校友返校日暨首届定向越野挑战赛。"
+    },
+    {
+        "id": 24,
+        "name": "东莞银行杯双城同心·协作共赢莞韶城定向越野",
+        "date": "2025-12-07",
+        "dateDisplay": "2025年12月7日",
+        "location": "韶关",
+        "cover": "./images/cover-village.jpg",
+        "albumUrl": "https://m.alltuu.com/album/sharimg/1566322142/3026324004/82c6d1512b85c996eea0b9e74a7ddf6c?menu=live",
+        "photoCount": "1,000",
+        "status": "past",
+        "year": "2025",
+        "tag": "城际赛",
+        "desc": "东莞银行杯双城同心·协作共赢莞韶城定向越野主题活动。"
+    },
+    {
+        "id": 25,
+        "name": "2025年（第三届）全国测绘地理信息行业冬季定向越野赛",
+        "date": "2025-12-16",
+        "dateDisplay": "2025年12月16-19日",
+        "location": "海口",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://m.alltuu.com/album/e1c4c7b5a18ffb2bcc9f487df5dc4001/?menu=live",
+        "photoCount": "2,500",
+        "status": "past",
+        "year": "2025",
+        "tag": "全国赛",
+        "desc": "2025年（第三届）全国测绘地理信息行业冬季定向越野赛。"
+    },
+    {
+        "id": 26,
+        "name": "2025年全国民族定向锦标赛暨全国学生定向邀请赛",
+        "date": "2025-10-14",
+        "dateDisplay": "2025年10月14-17日",
+        "location": "阿瓦提",
+        "cover": "./images/cover-mountain.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia10420909688.html",
+        "photoCount": "4,000",
+        "status": "past",
+        "year": "2025",
+        "tag": "全国赛",
+        "desc": "2025年全国民族定向锦标赛暨全国学生定向邀请赛，第十六届全国测绘地理信息职工定向越野赛。"
+    },
+    {
+        "id": 27,
+        "name": "2025年深圳市华强北城市定向挑战赛",
+        "date": "2025-09-13",
+        "dateDisplay": "2025年9月13日",
+        "location": "华强北",
+        "cover": "./images/cover-village.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia10134354262.html",
+        "photoCount": "2,200",
+        "status": "past",
+        "year": "2025",
+        "tag": "城市定向",
+        "desc": "智创华强北·定向新动能2025年深圳市华强北城市定向挑战赛。"
+    },
+    {
+        "id": 28,
+        "name": "2025年南山区少年儿童定向越野锦标赛",
+        "date": "2025-09-27",
+        "dateDisplay": "2025年9月27日",
+        "location": "哈工深",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia10257974669.html",
+        "photoCount": "1,800",
+        "status": "past",
+        "year": "2025",
+        "tag": "区锦标赛",
+        "desc": "2025年南山区少年儿童定向越野锦标赛。"
+    },
+    {
+        "id": 29,
+        "name": "2025年深圳市定向和无线电测向联赛暨深圳定向40周年纪念赛",
+        "date": "2025-09-27",
+        "dateDisplay": "2025年9月27日",
+        "location": "哈工深",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia10258007087.html",
+        "photoCount": "2,000",
+        "status": "past",
+        "year": "2025",
+        "tag": "市联赛",
+        "desc": "2025年深圳市定向和无线电测向联赛暨深圳定向40周年纪念赛。"
+    },
+    {
+        "id": 30,
+        "name": "广东省第十九届定向锦标赛暨2025粤港澳大湾区定向邀请赛",
+        "date": "2025-07-19",
+        "dateDisplay": "2025年7月19日",
+        "location": "东莞滨海湾",
+        "cover": "./images/cover-award.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia9617601178.html",
+        "photoCount": "3,500",
+        "status": "past",
+        "year": "2025",
+        "tag": "省锦标赛",
+        "desc": "喜迎十五运广东省第十九届定向锦标赛暨2025粤港澳大湾区（东莞）定向邀请赛。"
+    },
+    {
+        "id": 31,
+        "name": "2025年第二届深中同城定向挑战赛",
+        "date": "2025-06-24",
+        "dateDisplay": "2025年6月24日",
+        "location": "深圳基金小镇-中山翠亨",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia9457409212.html",
+        "photoCount": "1,500",
+        "status": "past",
+        "year": "2025",
+        "tag": "城际赛",
+        "desc": "中国体育彩票2025年第二届深中同城定向挑战赛。"
+    },
+    {
+        "id": 32,
+        "name": "2025年第二届深圳市定向锦标赛",
+        "date": "2025-05-24",
+        "dateDisplay": "2025年5月24-25日",
+        "location": "深圳技术大学",
+        "cover": "./images/cover-award.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia9133666600.html",
+        "photoCount": "2,800",
+        "status": "past",
+        "year": "2025",
+        "tag": "市锦标赛",
+        "desc": "中国体育彩票·2025年第二届深圳市定向锦标赛。"
+    },
+    {
+        "id": 33,
+        "name": "广东省第十二届大学生运动会华瑞健杯定向运动比赛",
+        "date": "2025-05-14",
+        "dateDisplay": "2025年5月14日",
+        "location": "暨南大学",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://www.xxpie.com/m/album?id=68234ca928bf1f6be2fd47e9&source=SHARE_LINK&r=8517",
+        "photoCount": "2,000",
+        "status": "past",
+        "year": "2025",
+        "tag": "省大运会",
+        "desc": "广东省第十二届大学生运动会华瑞健杯定向运动比赛。"
+    },
+    {
+        "id": 34,
+        "name": "2025年深圳市中小学生定向越野比赛",
+        "date": "2025-05-10",
+        "dateDisplay": "2025年5月10-11日",
+        "location": "中山大学深圳",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "http://szbsedu.inmuu.com/v2/photolive/news/4770180/photo?inviteId=32758091&wxAuth=-3",
+        "photoCount": "3,200",
+        "status": "past",
+        "year": "2025",
+        "tag": "中小学生赛",
+        "desc": "2025年深圳市中小学生定向越野比赛。"
+    },
+    {
+        "id": 35,
+        "name": "清风行·廉心路城建集团廉洁教育主题徒步定向活动",
+        "date": "2025-04-17",
+        "dateDisplay": "2025年4月17日",
+        "location": "莲花山公园",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://live.photoplus.cn/live/pc/96294886/",
+        "photoCount": "800",
+        "status": "past",
+        "year": "2025",
+        "tag": "企业活动",
+        "desc": "清风行·廉心路城建集团廉洁教育主题徒步定向活动。"
+    },
+    {
+        "id": 36,
+        "name": "深圳户外运动季系列活动暨定向运动赛活动",
+        "date": "2025-04-20",
+        "dateDisplay": "2025年4月20日",
+        "location": "莲花山公园",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia8835696440.html",
+        "photoCount": "1,500",
+        "status": "past",
+        "year": "2025",
+        "tag": "市户外活动",
+        "desc": "深圳户外运动季系列活动暨定向运动赛活动。"
+    },
+    {
+        "id": 37,
+        "name": "2024年深圳市定向和无线电测向联赛总决赛",
+        "date": "2024-12-21",
+        "dateDisplay": "2024年12月21日",
+        "location": "北站中心公园",
+        "cover": "./images/cover-award.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia7798710576.html",
+        "photoCount": "2,000",
+        "status": "past",
+        "year": "2024",
+        "tag": "市联赛",
+        "desc": "2024年深圳市定向和无线电测向联赛总决赛-北站中心公园站。"
+    },
+    {
+        "id": 38,
+        "name": "深圳市南山区第六届运动会青少年组定向越野竞赛",
+        "date": "2024-12-14",
+        "dateDisplay": "2024年12月14日",
+        "location": "中山公园",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia7973400046.html",
+        "photoCount": "1,800",
+        "status": "past",
+        "year": "2024",
+        "tag": "区运会",
+        "desc": "深圳市南山区第六届运动会青少年组定向越野竞赛。"
+    },
+    {
+        "id": 39,
+        "name": "2024年全国测绘地理信息行业冬季定向越野赛",
+        "date": "2024-11-28",
+        "dateDisplay": "2024年11月28日",
+        "location": "海南儋州",
+        "cover": "./images/cover-mountain.jpg",
+        "albumUrl": "https://m.alltuu.com/album/1733415115/?menu=live",
+        "photoCount": "2,000",
+        "status": "past",
+        "year": "2024",
+        "tag": "全国赛",
+        "desc": "2024年胡梁云服杯全国测绘地理信息行业冬季定向越野赛。"
+    },
+    {
+        "id": 40,
+        "name": "2024佗城定向周",
+        "date": "2024-10-01",
+        "dateDisplay": "2024年10月1-5日",
+        "location": "佗城",
+        "cover": "./images/cover-village.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia7276915391.html",
+        "photoCount": "4,500",
+        "status": "past",
+        "year": "2024",
+        "tag": "定向周",
+        "desc": "2024佗城定向周广东省体育赛事进景区、进街区、进商圈系列活动。"
+    },
+    {
+        "id": 41,
+        "name": "2024年深中同城定向挑战赛",
+        "date": "2024-07-27",
+        "dateDisplay": "2024年7月27日",
+        "location": "深圳基金小镇-中山翠亨",
+        "cover": "./images/cover-shenzhen.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia6786191897.html",
+        "photoCount": "1,500",
+        "status": "past",
+        "year": "2024",
+        "tag": "城际赛",
+        "desc": "2024年深中同城定向挑战赛。"
+    },
+    {
+        "id": 42,
+        "name": "2024年广东省中小学生春季定向运动锦标赛",
+        "date": "2024-06-15",
+        "dateDisplay": "2024年6月15-16日",
+        "location": "云浮",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia6363993387.html",
+        "photoCount": "2,800",
+        "status": "past",
+        "year": "2024",
+        "tag": "省锦标赛",
+        "desc": "2024年广东省中小学生春季定向运动锦标赛。"
+    },
+    {
+        "id": 43,
+        "name": "深圳市第十一届运动会群众体育组定向项目",
+        "date": "2024-06-08",
+        "dateDisplay": "2024年6月8日",
+        "location": "笔架山公园",
+        "cover": "./images/cover-award.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia6273940604.html",
+        "photoCount": "2,200",
+        "status": "past",
+        "year": "2024",
+        "tag": "市运会",
+        "desc": "中国体育彩票·深圳市第十一届运动会群众体育组定向项目。"
+    },
+    {
+        "id": 44,
+        "name": "广东省第十八届定向锦标赛暨2024粤港澳大湾区定向邀请赛",
+        "date": "2024-06-01",
+        "dateDisplay": "2024年6月1-2日",
+        "location": "东莞滨海湾",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia6426784617.html",
+        "photoCount": "3,500",
+        "status": "past",
+        "year": "2024",
+        "tag": "省锦标赛",
+        "desc": "我要上全运广东省第十八届定向锦标赛暨2024东莞市粤港澳大湾区定向邀请赛。"
+    },
+    {
+        "id": 45,
+        "name": "2022年广东省大学生定向运动锦标赛",
+        "date": "2023-04-22",
+        "dateDisplay": "2023年4月22-23日",
+        "location": "港中深",
+        "cover": "./images/cover-award.jpg",
+        "albumUrl": "https://www.pailixiang.com/album_ia4916028686.html",
+        "photoCount": "2,000",
+        "status": "past",
+        "year": "2023",
+        "tag": "省锦标赛",
+        "desc": "2022年广东省大学生定向运动锦标赛。"
+    },
+    {
+        "id": 46,
+        "name": "2023年寻找美丽中华全国乡村定向系列赛暨广东省大学生定向运动锦标赛",
+        "date": "2023-10-28",
+        "dateDisplay": "2023年10月28-29日",
+        "location": "中山里溪",
+        "cover": "./images/cover-hero.jpg",
+        "albumUrl": "https://live.photoplus.cn/live/pc/72555420/",
+        "photoCount": "2,500",
+        "status": "past",
+        "year": "2023",
+        "tag": "省锦标赛",
+        "desc": "2023年寻找美丽中华全国乡村定向系列赛事活动丨中山里溪站暨2023年广东省大学生定向运动锦标赛。"
+    },
+    {
+        "id": 47,
+        "name": "2023年全国创芯智力电子制作亲子赛(广东深圳站)",
+        "date": "2023-11-18",
+        "dateDisplay": "2023年11月18-19日",
+        "location": "深圳",
+        "cover": "./images/cover-family.jpg",
+        "albumUrl": "https://live.photoplus.cn/live/pc/47560596/",
+        "photoCount": "1,500",
+        "status": "past",
+        "year": "2023",
+        "tag": "全国赛",
+        "desc": "2023年全国创芯智力电子制作亲子赛（广东深圳站）。"
     }
 ];
-// ============================================================
 
-// --- Render ---
-function renderEvents(filterYear = 'all') {
-    const container = document.getElementById('eventList');
-    const empty = document.getElementById('emptyState');
-    let filtered = filterYear === 'all' ? events : events.filter(e => e.year === filterYear);
-
-    if (filtered.length === 0) {
-        container.innerHTML = '';
-        empty.classList.add('show');
-        return;
-    }
-    empty.classList.remove('show');
-
-    const grouped = filtered.reduce((acc, e) => {
-        (acc[e.year] = acc[e.year] || []).push(e);
-        return acc;
-    }, {});
-
-    let html = '';
-    Object.keys(grouped).sort((a,b) => b-a).forEach(year => {
-        const list = grouped[year].sort((a,b) => new Date(b.date) - new Date(a.date));
-        html += `<div class="year-header">
-            <span class="year-num">${year}</span>
-            <span class="year-line"></span>
-            <span class="year-count">${list.length} 场赛事</span>
-        </div>`;
-
-        list.forEach((ev, i) => {
-            html += `<a href="${ev.albumUrl}" class="event-card animate-in" style="animation-delay:${i*0.08}s" target="_blank" rel="noopener">
-                <div class="event-img-wrap">
-                    <img src="${ev.cover}" alt="${ev.name}" loading="lazy">
-                    <div class="event-img-overlay">
-                        <span class="event-tag ${ev.status}">${ev.status === 'live' ? '● 正在直播' : ev.tag}</span>
-                        <div class="event-title-img">${ev.name}</div>
-                    </div>
-                </div>
-                <div class="event-body">
-                    <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;line-height:1.6">${ev.desc}</p>
-                    <div class="event-meta">
-                        <span class="meta">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-                            ${ev.dateDisplay}
-                        </span>
-                        <span class="meta">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            ${ev.location}
-                        </span>
-                    </div>
-                    <div class="event-footer">
-                        <span class="photo-count">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                            ${ev.photoCount} 张照片
-                        </span>
-                        <span class="btn-enter">
-                            进入相册
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </span>
-                    </div>
-                </div>
-            </a>`;
+function renderEvents(filterYear) {
+    filterYear = filterYear || 'all';
+    var container = document.getElementById('eventList');
+    var empty = document.getElementById('emptyState');
+    var filtered = filterYear === 'all' ? events : events.filter(function(e) { return e.year === filterYear; });
+    if (filtered.length === 0) { container.innerHTML = ''; empty.style.display = 'block'; return; }
+    empty.style.display = 'none';
+    var grouped = {};
+    filtered.forEach(function(e) { grouped[e.year] = grouped[e.year] || []; grouped[e.year].push(e); });
+    var years = Object.keys(grouped).sort(function(a,b) { return b - a; });
+    var html = '';
+    years.forEach(function(year) {
+        var list = grouped[year].sort(function(a,b) { return new Date(b.date) - new Date(a.date); });
+        html += '<div class="year-header"><span class="year-num">' + year + '</span><span class="year-line"></span><span class="year-count">' + list.length + ' 场赛事</span></div>';
+        list.forEach(function(ev, i) {
+            html += '<a href="' + ev.albumUrl + '" class="event-card animate-in" style="animation-delay:' + (i*0.08) + 's" target="_blank" rel="noopener">';
+            html += '<div class="event-img-wrap"><img src="' + ev.cover + '" alt="' + ev.name + '" loading="lazy"><div class="event-img-overlay"><span class="event-tag past">' + ev.tag + '</span><div class="event-title-img">' + ev.name + '</div></div></div>';
+            html += '<div class="event-body"><p class="event-desc">' + ev.desc + '</p><div class="event-meta"><span class="meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>' + ev.dateDisplay + '</span><span class="meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' + ev.location + '</span></div>';
+            html += '<div class="event-footer"><span class="photo-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>' + ev.photoCount + ' 张照片</span><span class="btn-enter">进入相册<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></div>';
+            html += '</div></a>';
         });
     });
     container.innerHTML = html;
 }
 
-// --- Stats ---
-function animateNum(el, target, suffix = '') {
-    const duration = 1000;
-    const start = performance.now();
-    (function tick(now) {
-        const p = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        const val = Math.floor(eased * target);
-        el.textContent = val.toLocaleString() + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-    })(start);
+function animateNum(el, target, suffix) {
+    suffix = suffix || '';
+    var duration = 1000, start = performance.now();
+    function tick(now) { var p = Math.min((now - start) / duration, 1); var eased = 1 - Math.pow(1 - p, 3); var val = Math.floor(eased * target); el.textContent = val.toLocaleString() + suffix; if (p < 1) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
 }
 
 function updateStats() {
-    const totalEvents = events.length;
-    const totalPhotos = events.reduce((s, e) => s + parseInt(e.photoCount.replace(/,/g, '')), 0);
-    const years = new Set(events.map(e => e.year)).size;
+    var totalEvents = events.length;
+    var totalPhotos = events.reduce(function(s, e) { return s + parseInt(e.photoCount.replace(/,/g, '')); }, 0);
+    var years = new Set(events.map(function(e) { return e.year; })).size;
     animateNum(document.getElementById('sEvents'), totalEvents);
     animateNum(document.getElementById('sPhotos'), Math.floor(totalPhotos / 1000), 'K+');
     animateNum(document.getElementById('sYears'), years);
 }
 
-// --- Filter ---
-document.getElementById('filterBar').addEventListener('click', e => {
+document.getElementById('filterBar').addEventListener('click', function(e) {
     if (e.target.classList.contains('filter-chip')) {
-        document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.filter-chip').forEach(function(b) { b.classList.remove('active'); });
         e.target.classList.add('active');
         renderEvents(e.target.dataset.filter);
     }
 });
 
-// --- Init ---
 renderEvents();
 updateStats();
 </script>
